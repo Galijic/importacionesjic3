@@ -1,0 +1,98 @@
+.capa {
+    max-height: 100vh;
+    border: 0px solid #df1a1a;
+    display: flex;
+    overflow-x: auto;
+}
+
+.capa::-webkit-scrollbar {
+    width: 0;
+}
+
+.capa .item {
+    min-width: 45vh;
+    height: 60vh;
+    line-height: 50vh;
+    background-color: #fefefe;
+    margin: 0 10px;
+    border-radius: 8%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Espacio interno para evitar que los elementos se peguen a los bordes */
+    box-sizing: border-box;
+}
+
+.capa .item img {
+    width: 90%; /* Reducir el tamaÃ±o de la imagen para mÃ¡s espacio */
+    margin-top: 10px; /* Espacio superior para separar la imagen */
+}
+
+.capa .item h4 {
+ /* SeparaciÃ³n entre el texto y los bordes o la imagen */
+    padding: 10px;
+    line-height: 1.4;
+    color: rgb(11, 11, 11);
+    font-family: "Teko", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+  font-size: 20px;
+}
+
+.capa .item button {
+    color: rgb(8, 7, 7);
+    background-color: rgba(3, 210, 218, 0.426);
+    font-family: "Teko", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+  font-size: 10px;
+    padding: 0px 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    flex: 1;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+
+body {
+    background-image: url('img/fondo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.navegacion {
+    background-color: rgba(36, 245, 238, 0.276);
+    padding: 15px;
+    text-align: center;
+}
+.navegacion a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.intro-text {
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}

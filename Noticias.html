@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panas</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chathura&family=Rubik+Glitch&family=Smooch+Sans:wght@100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+
+body {
+    font-family: 'Capriola', sans-serif;
+}
+
+
+        .content>.text,
+        .content>.image {
+            flex: 1 1 50%;
+            
+            align-items: center;
+        }
+
+        .text {
+            padding: 16px;
+        }
+
+        .pequeno {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .grande {
+            text-align: center;
+            font-size: 65px;
+        }
+
+        .mediano {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .content>.text,
+            .content>.image {
+                flex-basis: 100%;
+               
+            }
+        }
+
+        .w3-button {
+            padding: 16px;
+        }
+
+/*inclusivo hover*/
+p:hover{
+     
+  font-size: 200%;
+} 
+ p{
+    transition: all 0.3s ease;
+ }
+
+h2:hover{
+    font-size: 700%;
+}
+h2{
+    transition: all 0.3s ease;
+ }
+
+/* Botón de tipografía para disléxicos */
+.dyslexia-font-btn {
+    background-color: #09eedbb9; /* Color de fondo */
+    color: rgb(32, 25, 25); /* Color del texto/ícono */
+    border: none; /* Sin bordes */
+    border-radius: 50px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    font-size: 18px; /* Tamaño del texto */
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Alinear contenido verticalmente */
+    gap: 10px; /* Espacio entre ícono y texto */
+    box-shadow: 0 4px 6px rgba(195, 192, 192, 0.2); /* Sombra */
+    transition: background-color 0.3s, color 0.3s; /* Animación de cambio */
+    position: sticky; /* Fijo en la pantalla */
+    top: 60px; /* Ajusta según la posición del modo nocturno */
+    right: 10px; /* Colocado al lado izquierdo del botón de modo oscuro */
+    z-index: 1000; /* Siempre visible */
+}
+
+.dyslexia-font-btn:hover {
+    background-color: #09eedbb9; /* Cambia a un naranja más oscuro */
+}
+/* Tipografía amigable para disléxicos */
+.dyslexia-font * {
+    font-family: 'OpenDyslexic', sans-serif !important; /* Cambiar toda la tipografía */
+}
+
+/*modo oscuro*/
+.dark-mode {
+            background-color: #fbfbfb;
+            border-radius: ;
+            color: #adedf0;
+        }
+/* Estilo para todo el texto en modo oscuro */
+.dark-mode * {
+    color: #0a0a0a !important; /* Forzar el color blanco para todo el texto */
+}
+        .dark-mode .w3-bar {
+            background-color: #cac6c6;
+        }
+
+        .dark-mode .w3-button {
+            color: #07efeb;
+        }
+
+        .dark-mode .w3-row {
+            background-color: #f7f3f3;
+        }
+        .dark-mode .w3-text-white {
+            color: #161717 !important;
+        }
+
+/* Modo oscuro: colores */
+        .dark-mode .w3-bar {
+            background-color: #fefefe;
+        }
+
+        .dark-mode .w3-button {
+            color: #11fde1;
+        }
+
+        .dark-mode .w3-bar-item {
+            color: #0d0d0d;
+        }
+
+        .dark-mode .clientes {
+            color: #191a1a
+        }
+
+        .dark-mode .w3-orange {
+            background-color: #09eedbb9;
+        }
+
+        .dark-mode .w3-text-white {
+            color: #facea7 !important;
+        }
+
+
+
+
+
+
+        /* Botón de modo oscuro */
+        .mode-toggle-btn {
+      background-color: #09eedbb9; /* Color de fondo */
+      color: rgb(8, 8, 8); /* Color del texto/ícono */
+      border: none; /* Sin bordes */
+      border-radius: 50px; /* Bordes redondeados */
+      padding: 10px 20px; /* Espaciado interno */
+      cursor: pointer; /* Cambiar cursor al pasar por encima */
+      font-size: 18px; /* Tamaño del texto */
+      display: flex; /* Usar flexbox */
+      align-items: center; /* Alinear contenido verticalmente */
+      gap: 10px; /* Espacio entre ícono y texto */
+      box-shadow: 0 4px 6px rgba(234, 232, 232, 0.2); /* Sombra */
+      transition: background-color 0.3s, color 0.3s; /* Animación de cambio */
+      position: sticky; /* Fijo en la pantalla */
+      top: 10px; /* Posición desde arriba */
+      right: 10px; /* Posición desde la derecha */
+      z-index: 1000; /* Siempre visible */
+        }
+
+.mode-toggle-btn:hover {
+      background-color: #09eedbb9; /* Color de fondo al pasar el cursor */
+  }
+
+  /* Ícono */
+  .mode-toggle-btn i {
+      font-size: 20px; /* Tamaño del ícono */
+
+        /* Otros estilos de contenido */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .content>.text,
+        .content>.image {
+            flex: 1 1 50%;
+            align-items: center;
+        }
+
+        .text {
+            padding: 16px;
+        }
+
+        .pequeno {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .grande {
+            text-align: center;
+            font-size: 65px;
+        }
+
+        .mediano {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .content>.text,
+            .content>.image {
+                flex-basis: 100%;
+            }
+        }
+
+.inicio{
+    height: auto;
+    width: 100%;
+}
+
+
+    </style>
+</head>
+
+
+<nav class="navbar navbar-expand-md sticky-top border-bottom" style="background-color: #00f9e4cd;">
+  <div class="container">
+      <img src="IMG JIC/JIC logo-04.png" alt="logo" class="logo">
+   <a class="navbar-brand d-md-none" href="Inicio.html">
+      <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
+   </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+      <div class="offcanvas-header">
+        <img src="IMG JIC/JIC logo-04.png" alt="logo" class="logo">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-grow-1 justify-content-between">
+          <li class="nav-item"><a class="nav-link" href="#">
+            <svg class="bi" width="24" height="24"><use xlink:href="#"/></svg>
+          </a></li>
+       
+          <li class="nav-item"><a class="nav-link" href="Inicio.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="Personalización.html">Personalización</a></li>
+          <li class="nav-item"><a class="nav-link" href="Promocion.html">Promociones</a></li>
+          <li class="nav-item"><a class="nav-link" href="mayoristas.html">Mayoristas</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactanos.html">Contactanos</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="Noticias.html">Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+              <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
+            </svg></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-badge" viewBox="0 0 16 16">
+              <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+              <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492z"/>
+            </svg></a></li>
+            <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<body>
+<!-- Botón para alternar el modo oscuro -->
+
+
+<button class="mode-toggle-btn" onclick="toggleDarkMode()"><i class="fas fa-moon"></i>Modo Claro</button>
+<!-- Botón para cambiar la tipografía -->
+<button class="dyslexia-font-btn" onclick="toggleDyslexiaFont()">
+<i class="fas fa-font"></i>Disléxicos
+</button>
+
+    <div class="content">
+        <!-- texto -->
+         
+
+        <div class="text w3-padding-large">
+            <br><br><br><br><br><br><br>
+            <div class="gen">
+              <img src="https://mandalacases.com/cdn/shop/articles/IMAGEN.jpg?v=1694543731&width=640"" alt="Descripción de la imagen" width="600">
+            </div>
+            <br>
+            <h1>Tendencias en Cases: Estilo y Protección en el 2025</h1>
+            <p class="pequeno"><b style="color: #09eedbb9">Somos una agencia boutique fundada por tres talentosas diseñadoras con una visión creativa y estratégica.</b> Nos especializamos en la creación de publicidad y diseño que no solo cumple con
+              El  mundo esta en constante evolución de la tecnología, los teléfonos móviles se han convertido en una extensión de nosotros mismos. No solo son herramientas funcionales, sino también expresiones</p>
+<div class="w3-center w3-padding-16">
+                <button class="w3-button w3-white w3-round-xxlarge" onclick="document.getElementById('audio1').play()">🎙️ Ver más</button>
+                <audio id="audio1" src="audio/pana.mp3"></audio>
+</div>
+
+<br><br><br>
+
+<div class="gen">
+  <img src="https://mandalacases.com/cdn/shop/articles/Imagen_de_WhatsApp_2023-10-09_a_las_11.35.55_940ebfdd.jpg?v=1697574349&width=1400" alt="Descripción de la imagen" width="600">
+</div>
+<br>
+            <h1>Los Top 3 Accesorios Imprescindibles para tu Cel</h1>
+            <p class="pequeno">Ofrecemos <b style="color: #09eedbb9">servicios personalizados de publicidad y diseño enfocados en la creación y
+                desarrollo de marcas. </b> Nos especializamos en brindar soluciones innovadoras y estéticamente
+                atractivas que se adaptan a las necesidades y objetivos específicos de cada cliente. </p>
+
+<div class="w3-center w3-padding-16">
+                <button class="w3-button w3-white w3-round-xxlarge" onclick="document.getElementById('audio2').play()">🎙️ Ver más</button>
+                <audio id="audio2" src="audio/pana2.mp3"></audio>
+</div>
+
+        </div>
+
+        
+
+        <!-- imagen -->
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("mobileMenu");
+            if (x.classList.contains("w3-show")) {
+                x.classList.remove("w3-show");
+            } else {
+                x.classList.add("w3-show");
+            }
+        }
+
+function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+
+      const button = document.querySelector('.mode-toggle-btn');
+      const icon = button.querySelector('i');
+
+      if (body.classList.contains('dark-mode')) {
+          button.textContent = ' Modo Claro';
+          icon.className = 'fas fa-sun'; // Cambiar al ícono de sol
+      } else {
+          button.textContent = ' Modo Oscuro';
+          icon.className = 'fas fa-moon'; // Cambiar al ícono de luna
+      }
+      button.prepend(icon); // Asegurar que el ícono quede al principio
+  }
+
+function toggleDyslexiaFont() {
+    const body = document.body;
+    body.classList.toggle('dyslexia-font'); // Alternar la clase
+}
+
+    </script>
+
+</body>
+
+</html>

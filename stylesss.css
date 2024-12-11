@@ -1,0 +1,103 @@
+/* Estilos Generales */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #fffb00;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+header {
+    background-color: #ff0044;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+}
+
+nav a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Título Principal */
+.title {
+    font-size: 4em;
+    text-align: center;
+    margin: 20px 0;
+    color: #ff0044;
+    transform: rotate(-5deg);
+}
+
+/* Contenedor de Productos */
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos de Productos */
+.producto {
+    background-color: #00ffcc;
+    padding: 20px;
+    border: 4px dashed #000;
+    width: 200px;
+    text-align: center;
+    transform: rotate(3deg);
+    box-shadow: 10px 10px 0px #000;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #000;
+}
+
+.producto .nombre {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.producto .precio {
+    font-size: 1.5em;
+    color: #ff0044;
+}
+
+/* Variantes de Antidiseño */
+.invertido {
+    background-color: #000;
+    color: #fff;
+    transform: rotate(-8deg);
+}
+
+.distorsionado {
+    background-color: #ff0044;
+    color: #00ffcc;
+    font-size: 1.3em;
+    transform: skewX(-10deg);
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}

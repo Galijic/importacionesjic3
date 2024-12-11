@@ -1,0 +1,118 @@
+body {
+    background-color: #ff4081; /* Rosa fuerte */
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #ffffff;
+}
+header {
+    position: relative;
+    background-color: #000;
+    padding: 40px;
+    text-align: center;
+    border-bottom: 5px solid #00bcd4;
+    transform: skewY(-5deg);
+    z-index: 100;
+}
+header h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 90px;
+    color: #00bcd4;
+    text-shadow: 10px 10px 0 #ff4081;
+    transform: skewY(5deg);
+}
+header p {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+.navbar {
+    background-color: #00bcd4;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.navbar-nav .nav-link {
+    color: #ff4081;
+    margin: 0 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+    border-bottom: 3px solid #ff4081;
+}
+.products-container {
+    padding: 50px 0;
+    background-color: #ff4081;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    margin-bottom: 100px;
+}
+.product-card {
+    background-color: #00bcd4;
+    border: 4px dashed #ff4081;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0 #ff4081;
+    position: relative;
+    text-align: center;
+    transform: rotate(2deg);
+}
+.product-card:nth-child(odd) {
+    background-color: #ff4081;
+    color: #000;
+    transform: rotate(-2deg);
+}
+.product-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #000;
+}
+.product-price {
+    font-size: 30px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.cta-button {
+    background-color: #ff4081;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.cta-button:hover {
+    background-color: #00bcd4;
+    color: #ff4081;
+    border: 2px solid #ff4081;
+}
+.cta-button:active {
+    transform: scale(0.95);
+}
+footer {
+    background-color: #00bcd4;
+    color: #ff4081;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+footer a {
+    color: #ff4081;
+    text-decoration: none;
+}
